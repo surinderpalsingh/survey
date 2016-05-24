@@ -2,15 +2,28 @@ var app = angular.module('app');
 app.controller('main', [
   '$scope',
   '$http',
-  function($scope, $http) {
-    var promise = $http.get("/get-surveys-list");
+  'BASE_URL',
+  function($scope, $http,BASE_URL) {
+    var promise = $http.get( BASE_URL + "/get-surveys-list");
+    $scope.spinner = true;
     promise.then(
       function(response) {
-        $scope.menuItems = response.data.survey_results;
-        console.log($scope.menuItems);
+
+        // Display error if no data is returned
+        if(!response.data){
+          $scope.error = true;
+        } else {
+          $scope.menuItems = response.data.survey_results;
+        }
+
+        $scope.spinner = false;
+
+
       }
     ).catch(function(response) {
-      //  console.error('Gists error', response.status, response.data);
+        $scope.error = true;
+    }).finally(function(){
+        $scope.spinner = false;
     });
   }
 ]);

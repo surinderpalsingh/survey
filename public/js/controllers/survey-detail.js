@@ -3,18 +3,26 @@ app.controller('surveyDetail', [
   '$scope',
   '$http',
   '$routeParams',
-  function($scope, $http, $routeParams) {
-    console.log($routeParams);
-
-    var promise = $http.get("/survey-result/" + $routeParams.surveyId);
+  'BASE_URL',
+  function($scope, $http, $routeParams,BASE_URL) {
+    $scope.$parent.spinner = true;
+    var promise = $http.get(BASE_URL + "/survey-result/" + $routeParams.surveyId);
     promise.then(
       function(response) {
-        $scope.surveyDetail = response.data.survey_result_detail;
 
+        // Display error if no data is returned
+        if(!response.data){
+          $scope.error = true;
+
+        } else{
+          $scope.surveyDetail = response.data.survey_result_detail;
+
+        }
       }
     ).catch(function(response) {
-      //  console.error('Gists error', response.status, response.data);
+        $scope.error = true;
+    }).finally(function(){
+        $scope.$parent.spinner = false;
     });
-
   }
 ]);

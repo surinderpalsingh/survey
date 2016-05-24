@@ -2,34 +2,18 @@ var gulp = require('gulp'),
   nodemon = require('gulp-nodemon'),
   plumber = require('gulp-plumber'),
   livereload = require('gulp-livereload'),
-  jshint = require('gulp-jshint'),
-  sass = require('gulp-sass'),
-  del = require('del');
-
-
-var paths = {
-  scripts: './public/js',
-  sass: './public/sass',
-  css: './public/css',
-};
+  sass = require('gulp-sass');
 
 gulp.task('sass', function () {
-  gulp.src(paths.scripts)
+  gulp.src('./public/css/*.scss')
     .pipe(plumber())
     .pipe(sass())
-    .pipe(gulp.dest(paths.css))
+    .pipe(gulp.dest('./public/css'))
     .pipe(livereload());
 });
 
-gulp.task('lint', function() {
-    return gulp.src(paths.scripts)
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
-});
-
-
 gulp.task('watch', function() {
-  gulp.watch(paths.sass +'*.scss',['lint','sass']);
+  gulp.watch('./public/css/*.scss', ['sass']);
 });
 
 gulp.task('develop', function () {

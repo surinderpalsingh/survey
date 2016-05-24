@@ -1,6 +1,9 @@
 <div class="page-header">
   <h1>{{surveyDetail.name}}</h1>
+  <div ng-show="error" class="alert alert-danger" role="alert">
+      <strong>Oh snap!</strong> An error occurred during loading data, please try after sometime</div>
 </div>
+
 <br>
 <div ng-repeat="theme in surveyDetail.themes">
   <h3 class="h3">Theme: <i>{{theme.name}}</i></h3>
