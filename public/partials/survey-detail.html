@@ -3,7 +3,7 @@
 </div>
 <br>
 <div ng-repeat="theme in surveyDetail.themes">
-  <h3 class="h3">{{theme.name}}</h3>
+  <h3 class="h3">Theme: <i>{{theme.name}}</i></h3>
   <ul class="list-group">
     <li class="list-group-item" ng-repeat="question in theme.questions">
        <span class="badge">Average rating: {{ question.survey_responses | average}}<i class="fa fa-star-o" aria-hidden="true"></i></span>

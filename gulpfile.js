@@ -4,7 +4,6 @@ var gulp = require('gulp'),
   livereload = require('gulp-livereload'),
   jshint = require('gulp-jshint'),
   sass = require('gulp-sass'),
-  gulpNgConfig = require('gulp-ng-config'),
   del = require('del');
 
 
@@ -13,7 +12,6 @@ var paths = {
   sass: './public/sass',
   css: './public/css',
 };
-
 
 gulp.task('sass', function () {
   gulp.src(paths.scripts)
