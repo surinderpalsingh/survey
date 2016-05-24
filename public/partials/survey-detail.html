@@ -1,0 +1,13 @@
+<div class="page-header">
+  <h1>{{surveyDetail.name}}</h1>
+</div>
+<br>
+<div ng-repeat="theme in surveyDetail.themes">
+  <h3 class="h3">{{theme.name}}</h3>
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="question in theme.questions">
+       <span class="badge">Average rating: {{ question.survey_responses | average}}<i class="fa fa-star-o" aria-hidden="true"></i></span>
+       <strong>Q{{$index+1}}.</strong> {{question.description}}
+    </li>
+  </ul>
+</div>
