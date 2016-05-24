@@ -6,4 +6,7 @@ It's assumed that you have installed node, expressm, gulp module in the system.
 # Installation
 Run ``npm install`` in the root folder and then run  ``bower install``.
 # Features
-This reads list of survey and render survey in the navigation bar. Furthermore, user can see the list of survey theme and questions of a theme. The average rating for each question is calculated based on responses from respondents
+This reads list of survey and render survey in the navigation bar. Furthermore, user can see the list of survey theme and questions of a theme. The average rating for each question is calculated based on responses from respondents.
+
+# Config
+Base url is defined in ``app.config.js`` which is currently pointing to localhost. Change this url to server if needed 
