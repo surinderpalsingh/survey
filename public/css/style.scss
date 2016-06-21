@@ -31,8 +31,15 @@ a {
 
 .survey-results
 {
+  h4 {
+    small {
+      margin-right: 22px;
+    }
+  }
+
   .result-item {
     overflow: hidden;
+
 
     .question-title {
       margin: 10px 0 0;

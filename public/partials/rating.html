@@ -1,7 +1,7 @@
 
-<div class="average-rating rating-{{rating}} text-center">Strongly Agree</div>
 <div ng-switch="rating">
   <div ng-switch-when="1" class="rating-stars text-center">
+    <div class="average-rating rating-{{rating}} text-center">Strongly Disagree</div>
     <i class="fa fa-star rating-1" aria-hidden="true"></i>
     <i class="fa fa-star no-rating" aria-hidden="true"></i>
     <i class="fa fa-star no-rating" aria-hidden="true"></i>
@@ -9,6 +9,7 @@
     <i class="fa fa-star no-rating" aria-hidden="true"></i>
   </div>
   <div ng-switch-when="2" class="rating-stars text-center">
+    <div class="average-rating rating-{{rating}} text-center">Disagree</div>
     <i class="fa fa-star rating-1" aria-hidden="true"></i>
     <i class="fa fa-star rating-2" aria-hidden="true"></i>
     <i class="fa fa-star no-rating" aria-hidden="true"></i>
@@ -16,6 +17,7 @@
     <i class="fa fa-star no-rating" aria-hidden="true"></i>
   </div>
   <div ng-switch-when="3" class="rating-stars text-center">
+    <div class="average-rating rating-{{rating}} text-center">Undecied</div>
     <i class="fa fa-star rating-1" aria-hidden="true"></i>
     <i class="fa fa-star rating-2" aria-hidden="true"></i>
     <i class="fa fa-star rating-3" aria-hidden="true"></i>
@@ -23,6 +25,7 @@
     <i class="fa fa-star no-rating" aria-hidden="true"></i>
   </div>
   <div ng-switch-when="4" class="rating-stars text-center">
+    <div class="average-rating rating-{{rating}} text-center">Agree</div>
     <i class="fa fa-star rating-1" aria-hidden="true"></i>
     <i class="fa fa-star rating-2" aria-hidden="true"></i>
     <i class="fa fa-star rating-3" aria-hidden="true"></i>
@@ -30,6 +33,7 @@
     <i class="fa fa-star no-rating" aria-hidden="true"></i>
   </div>
   <div ng-switch-when="5" class="rating-stars text-center">
+    <div class="average-rating rating-{{rating}} text-center">Strongly Agree</div>
     <i class="fa fa-star rating-1" aria-hidden="true"></i>
     <i class="fa fa-star rating-2" aria-hidden="true"></i>
     <i class="fa fa-star rating-3" aria-hidden="true"></i>

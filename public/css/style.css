@@ -5840,6 +5840,9 @@ a {
 .relative {
   position: relative; }
 
+.survey-results h4 small {
+  margin-right: 22px; }
+
 .survey-results .result-item {
   overflow: hidden; }
   .survey-results .result-item .question-title {
