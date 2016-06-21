@@ -1,5 +1,12 @@
-<ul class="nav navbar-nav">
-  <li ng-repeat="item in menuItems">
-    <a href="#{{item.url}}">{{item.name}}</a>
-  </li>
-</ul>
+<div ng-show="spinner" class="spinner relative">
+<i class="fa fa-spinner fa-spin"></i></div>
+<div ng-show="error" role="alert" class="alert alert-danger">
+  <strong>Oh snap!</strong><i>An error occurred during loading data, please try after sometime</i>
+</div>
+  <nav class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+      <li ng-class="{ active: isActive('{{item.url}}') }" ng-repeat="item in menuItems">
+        <a ng-href="#{{item.url}}">{{item.name}}</a>
+      </li>
+    </ul>
+  </nav>

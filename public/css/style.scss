@@ -1,23 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);
+$font-family-base: 'Roboto', sans-serif;
 @import '../components/bootstrap-sass/assets/stylesheets/bootstrap';
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+
+
 a {
   color: #00B7FF;
 }
+.navbar {
+  padding: 0 130px;
+}
+
 .spinner {
-  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   z-index: 999;
+
+  .fa-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    font-size: 50px;
+  }
 }
-.spinner .fa-spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -50px;
-  font-size: 50px;
+.relative {
+  position: relative;
+}
+
+.survey-results
+{
+  .result-item {
+    overflow: hidden;
+
+    .question-title {
+      margin: 10px 0 0;
+    }
+    .average-rating {
+      font-size: 11px;
+    }
+
+    .inline-block{
+      display: inline-block
+    }
+    .rating-stars {
+      i.fa {
+        font-size: 18px;
+      }
+    }
+    .rating-1 {
+      color: #ffa726;
+    }
+    .rating-2 {
+      color: #ff9800;
+    }
+    .rating-3 {
+      color: #fb8c00;
+    }
+    .rating-4 {
+      color: #f57c00;
+    }
+    .rating-5 {
+      color: #e65100;
+    }
+    .no-rating{
+      color: #e7e7e7;
+    }
+  }
+}
+div.page-header {
+  border: none;
+  margin-bottom:10px
 }

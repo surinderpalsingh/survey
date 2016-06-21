@@ -14,6 +14,10 @@ gulp.task('sass', function () {
 
 gulp.task('watch', function() {
   gulp.watch('./public/css/*.scss', ['sass']);
+  gulp.watch(['./public/*.html','./public/*/*.html'],function()
+  {
+     livereload.reload();
+  });
 });
 
 gulp.task('develop', function () {

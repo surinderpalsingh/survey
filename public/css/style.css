@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -1055,7 +1056,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -5187,7 +5188,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5300,7 +5301,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5817,24 +5818,51 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
-
 a {
   color: #00B7FF; }
 
+.navbar {
+  padding: 0 130px; }
+
 .spinner {
-  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   z-index: 999; }
+  .spinner .fa-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    font-size: 50px; }
 
-.spinner .fa-spinner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -50px;
-  font-size: 50px; }
+.relative {
+  position: relative; }
+
+.survey-results .result-item {
+  overflow: hidden; }
+  .survey-results .result-item .question-title {
+    margin: 10px 0 0; }
+  .survey-results .result-item .average-rating {
+    font-size: 11px; }
+  .survey-results .result-item .inline-block {
+    display: inline-block; }
+  .survey-results .result-item .rating-stars i.fa {
+    font-size: 18px; }
+  .survey-results .result-item .rating-1 {
+    color: #ffa726; }
+  .survey-results .result-item .rating-2 {
+    color: #ff9800; }
+  .survey-results .result-item .rating-3 {
+    color: #fb8c00; }
+  .survey-results .result-item .rating-4 {
+    color: #f57c00; }
+  .survey-results .result-item .rating-5 {
+    color: #e65100; }
+  .survey-results .result-item .no-rating {
+    color: #e7e7e7; }
+
+div.page-header {
+  border: none;
+  margin-bottom: 10px; }
