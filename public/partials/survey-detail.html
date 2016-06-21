@@ -1,7 +1,7 @@
 <div ng-show="spinner" class="spinner affix">
 <i class="fa fa-spinner fa-spin"></i></div>
 <div class="page-header">
-  <h1>{{surveyDetail.name}} <small>Paticipation: {{surveyDetail.response_rate * 100 | number:0}}%</small></h1>
+  <h1>{{surveyDetail.name}} <small ng-show="surveyDetail.response_rate">Paticipation: {{surveyDetail.response_rate * 100 | number:0}}%</small></h1>
   <div ng-show="error" class="alert alert-danger" role="alert">
       <strong>Oh snap!</strong> An error occurred during loading data, please try after sometime</div>
 </div>
