@@ -1,12 +1,26 @@
-# Culture Amp’s Front End Developer Coding Test
+# Angular Gulp prototype
 
-The project is running based on node server uisng express mvc. Sever reads static ``json`` files and serve them as a response.
-# Assumption
-It's assumed that you have installed node, expressm, gulp module in the system.
-# Installation
-Run ``npm install`` in the root folder and then run  ``bower install``.
-# Features
-This reads list of survey and render survey in the navigation bar. Furthermore, user can see the list of survey theme and questions of a theme. The average rating for each question is calculated based on responses from respondents.
+This is a angular prototype which I've created to display survey results as a part of some technical assessment.
 
-# Config
-Base url is defined in ``app.config.js`` which is currently pointing to localhost. Change this url to server if needed 
+I've used `gulp` as task runner to compile `SASS`. Static data files are served by `node` server.
+
+## Highlights
+This prototype covers custom directive, filter and services
+
+### Installation
+```bash
+$ git clone git@github.com:surinderpalsingh/survey.git
+$ cd survey
+$ bower install
+$ npm install
+```
+
+### Run HTTP Server:
+```bash
+$ gulp
+```
+You can access the app on http://localhost:8000
+
+Note: This is prototype is created a technical test. I'll expand this prototype to embed build features and test integration.
+
+Thanks for reading and if you have any question/query, I'm contactable `mannecheema@gmail.com`
